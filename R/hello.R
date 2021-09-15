@@ -64,4 +64,9 @@ print_my_name <- function(name) {
   print("ophir")
 }
 
+print_my_name <- function(name) {
+  print(name)
+  print("ophir")
+}
+
 
