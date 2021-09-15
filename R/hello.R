@@ -21,3 +21,23 @@ hello <- function() {
 plus <- function(a, b) {
   return(a + b)
 }
+
+
+dt_ <- function(df){
+  DT::datatable(
+    df,
+    extensions = c('Buttons', 'ColReorder', 'Scroller'),
+    options = list(
+      dom = 'Brtip',
+      buttons = c('copy', 'csv', 'pdf', 'colvis'),
+      colReorder = list(realtime = FALSE),
+      scroller = TRUE,
+      initComplete = JS(
+        "function(settings, json) {",
+        "$(this.api().table().header()).css({'background-color': '#000', 'color': '#fff'});",
+        "}")
+    )
+  )
+}
+
+
