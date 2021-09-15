@@ -59,3 +59,6 @@ un <- function(v) {
 }
 
 
+print_my_name <- function(name) {
+  print(name)
+}
