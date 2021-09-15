@@ -13,16 +13,8 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-hello <- function() {
-  print("Hello, world!")
-}
 
-
-plus <- function(a, b) {
-  return(a + b)
-}
-
-
+# for view table in the Viewer
 dt_ <- function(df){
   DT::datatable(
     df,
@@ -39,12 +31,29 @@ dt_ <- function(df){
     )
   )
 }
+dt_with_search <- function(df){
+  DT::datatable(
+    df,
+    extensions = c('Buttons', 'ColReorder', 'Scroller'),
+    options = list(
+      buttons = c('copy', 'csv', 'pdf', 'colvis'),
+      colReorder = list(realtime = FALSE),
+      scroller = TRUE,
+      initComplete = JS(
+        "function(settings, json) {",
+        "$(this.api().table().header()).css({'background-color': '#000', 'color': '#fff'});",
+        "}")
+    )
+  )
+}
 
 
+
+
+# see fast unique values
 u <- function(v) {
   unique(v)
 }
-
 un <- function(v) {
   data.table::uniqueN(v)
 }
