@@ -41,3 +41,10 @@ dt_ <- function(df){
 }
 
 
+u <- function(v) {
+  unique(v)
+}
+
+un <- function(v) {
+  data.table::uniqueN(v)
+}
