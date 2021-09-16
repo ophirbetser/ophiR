@@ -58,7 +58,4 @@ un <- function(v) {
   data.table::uniqueN(v)
 }
 
-unn <- function(v) {
-  data.table::uniqueN(v)
-}
 
