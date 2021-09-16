@@ -59,13 +59,13 @@ un <- function(v) {
 }
 
 N_i <- function(dt, i) {
-  dt <- data.table::as.data.table(dt)
-  dt[, .N, by = c(names(dt)[i])]
+  DT <- data.table::as.data.table(dt)
+  return(DT[, .N, by = c(names(DT)[i])])
 }
 
 N_name <- function(dt, name) {
-  dt <- data.table::as.data.table(dt)
-  dt[, .N, by = c(name)]
+  DT <- data.table::as.data.table(dt)
+  return(DT[, .N, by = c(name)])
 }
 
 
