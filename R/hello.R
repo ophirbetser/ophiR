@@ -69,11 +69,5 @@ N_name <- function(dt, name) {
 }
 
 
-print_DT <- function(dt) {
-  return(dt)
-}
 
-print_DT_N <- function(dt) {
-  return(data.table::as.data.table(dt))
-}
 
