@@ -57,9 +57,15 @@ u <- function(v) {
 un <- function(v) {
   data.table::uniqueN(v)
 }
-unn <- function(v) {
-  data.table::uniqueN(v)
+
+N_i <- function(dt, i) {
+  dt <- data.table::as.data.table(dt)
+  dt[, .N, by = c(names(dt)[i])]
 }
 
+N_name <- function(dt, name) {
+  dt <- data.table::as.data.table(dt)
+  dt[, .N, by = c(name)]
+}
 
 
