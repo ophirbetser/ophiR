@@ -58,15 +58,7 @@ un <- function(v) {
   data.table::uniqueN(v)
 }
 
-
-print_my_name <- function(name) {
-  print(name)
-  print("ophir")
+unn <- function(v) {
+  data.table::uniqueN(v)
 }
-
-print_my_name <- function(name) {
-  print(name)
-  print("ophir")
-}
-
 
